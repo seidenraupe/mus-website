@@ -1,15 +1,16 @@
 /* Museum Schaffen — visual recreation of museumschaffen.ch
    Original type is Agipo Light (Radim Peško, licensed for museumschaffen.ch).
-   This build uses Outfit as a publicly licensed geometric stand-in. */
+   Albert Sans (OFL) is a geometric sans with a Light cut, closer to Agipo
+   than Outfit. */
 
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap");
 
 :root {
   --black: #000;
   --white: #fff;
   --row: 1.8rem;
   --pad: 0.6rem;
-  --font: "Outfit", Arial, Helvetica, sans-serif;
+  --font: "Albert Sans", Avenir Next, Avenir, Century Gothic, Arial, Helvetica, sans-serif;
   --html: calc(18px + (48 - 18) * ((100vw - 300px) / (2560 - 300)));
   --body: calc(18px + (42 - 18) * ((100vw - 375px) / (2560 - 375)));
   --logo: calc(25px + (53 - 25) * ((100vw - 375px) / (2560 - 375)));
@@ -96,7 +97,7 @@ select {
   line-height: 3.2rem;
   font-weight: 300;
   text-decoration: none;
-  animation: ticker 28s linear infinite;
+  animation: ticker 140s linear infinite;
 }
 
 .ticker a:hover {
@@ -247,6 +248,7 @@ main {
 
 .grid-wrap {
   position: relative;
+  isolation: isolate;
 }
 
 .grid-lines {
@@ -274,6 +276,12 @@ main {
   .split-50 > :first-child {
     border-right: 1px solid var(--black);
   }
+}
+
+.split-50 > *:not(.grid-lines),
+.grid-wrap > *:not(.grid-lines) {
+  position: relative;
+  z-index: 1;
 }
 
 /* ——— Exhibition hero ——— */
@@ -356,10 +364,17 @@ main {
   text-overflow: ellipsis;
 }
 
+.row-image {
+  position: relative;
+  z-index: 2;
+  background: var(--white);
+}
+
 .row-image img {
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
+  background: var(--white);
 }
 
 .more-link {
@@ -443,10 +458,29 @@ main {
   opacity: 0.7;
 }
 
-.event-card img {
+.event-card img,
+.event-card .event-photo {
+  position: relative;
+  z-index: 2;
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
+  background: var(--white);
+}
+
+.event-card .event-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: var(--white);
+}
+
+.event-card .event-copy {
+  position: relative;
+  z-index: 1;
+  background: var(--white);
+  padding-bottom: 0.6rem;
 }
 
 /* ——— Prose pages ——— */

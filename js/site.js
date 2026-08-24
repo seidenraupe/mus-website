@@ -243,9 +243,9 @@
                 <div>${ev.time_start || ""}${ev.time_end ? "–" + ev.time_end : ""}</div>
                 <p class="tags">${t.join(" ")}</p>
               </div>
-              <div>
+              <div class="event-copy">
                 <h2>${ev.title}</h2>
-                ${ev.image ? `<img src="${ev.image}" alt="">` : ""}
+                ${ev.image ? `<div class="event-photo"><img src="${ev.image}" alt=""></div>` : ""}
               </div>
             </a>`;
         })
