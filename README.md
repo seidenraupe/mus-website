@@ -1,5 +1,7 @@
 # MuS-Website
 
+**Live:** https://seidenraupe.github.io/mus-website/
+
 Neuimplementierung von [museumschaffen.ch](https://www.museumschaffen.ch/) als statische Website: gleiche Informationsarchitektur und das typische Schwarz-Weiss-Raster (grosse Fliessschrift, Ticker, Zeilenraster). Die Originalschrift **Agipo Light** (Radim Peško) ist nur für museumschaffen.ch lizenziert — lokal steht Outfit als geometrischer Ersatz.
 
 ## Veranstaltungen (Eventfrog)
