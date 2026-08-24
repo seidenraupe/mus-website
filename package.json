@@ -1,0 +1,9 @@
+{
+  "name": "mus-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "fetch:events": "node scripts/fetch-mus-events.mjs"
+  }
+}

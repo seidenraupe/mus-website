@@ -1,0 +1,3 @@
+# Eventfrog Public API key — eine Zeile, nicht committen.
+# Datei kopieren nach eventfrog_api_key (ohne .example).
+EVENTFROG_API_KEY=
