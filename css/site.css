@@ -97,7 +97,7 @@ select {
   line-height: 3.2rem;
   font-weight: 300;
   text-decoration: none;
-  animation: ticker 140s linear infinite;
+  animation: ticker 420s linear infinite;
 }
 
 .ticker a:hover {
