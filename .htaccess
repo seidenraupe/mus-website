@@ -1,3 +1,6 @@
+AddType font/woff2 .woff2
+AddType font/otf .otf
+
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

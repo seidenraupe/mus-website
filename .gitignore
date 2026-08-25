@@ -9,4 +9,5 @@ __pycache__/
 cronjobs/eventfrog_api_key
 _scrape/
 deploy/
+_verify/
 *.log

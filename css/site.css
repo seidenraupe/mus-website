@@ -1,16 +1,30 @@
 /* Museum Schaffen — visual recreation of museumschaffen.ch
-   Original type is Agipo Light (Radim Peško, licensed for museumschaffen.ch).
-   Albert Sans (OFL) is a geometric sans with a Light cut, closer to Agipo
-   than Outfit. */
+   Agipo Light (Radim Peško), licensed for museumschaffen.ch. */
 
-@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+@font-face {
+  font-family: "Agipo";
+  src: url("../fonts/agipo_light.woff2") format("woff2"),
+    url("../fonts/agipo_light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Agipo";
+  src: url("../fonts/agipo_light.woff2") format("woff2"),
+    url("../fonts/agipo_light.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --black: #000;
   --white: #fff;
   --row: 1.8rem;
   --pad: 0.6rem;
-  --font: "Albert Sans", Avenir Next, Avenir, Century Gothic, Arial, Helvetica, sans-serif;
+  --font: "Agipo", Avenir Next, Avenir, Century Gothic, Arial, Helvetica, sans-serif;
   --html: calc(18px + (48 - 18) * ((100vw - 300px) / (2560 - 300)));
   --body: calc(18px + (42 - 18) * ((100vw - 375px) / (2560 - 375)));
   --logo: calc(25px + (53 - 25) * ((100vw - 375px) / (2560 - 375)));
@@ -46,6 +60,7 @@ body {
   font-family: var(--font);
   font-size: var(--body);
   font-weight: 300;
+  font-synthesis: none;
   line-height: 1.25;
   color: var(--black);
   background: var(--white);
