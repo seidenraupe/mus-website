@@ -1,0 +1,47 @@
+/* Local extras on top of original Weblication CSS.
+   Ticker animation (original uses GSAP). Font is already in design.css. */
+
+.ticker {
+  overflow: hidden;
+  display: flex !important;
+  white-space: nowrap;
+}
+
+.ticker .ticker-items,
+.lineticker .ticker-items {
+  display: inline-block;
+  flex-shrink: 0;
+  white-space: nowrap;
+  animation: musTicker 80s linear infinite;
+}
+
+.ticker:hover .ticker-items,
+.lineticker:hover .ticker-items {
+  animation-play-state: paused;
+}
+
+.lineticker {
+  overflow: hidden !important;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.listEntryElementThumbnailSize_var6 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes musTicker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+#cookieNotice.is-hidden {
+  display: none !important;
+}
+
+html.navmenu-open {
+  overflow: hidden;
+}
